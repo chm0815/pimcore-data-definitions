@@ -50,7 +50,7 @@ class ObjectbrickSetter implements SetterInterface, GetterInterface
                 $brickFieldObject = $brick->$brickClassGetter();
 
                 if (!$brickFieldObject instanceof AbstractData) {
-                    $brickFieldObjectClass = 'Pimcore\Model\DataObject\Objectbrick\Data\\' . $class;
+                    $brickFieldObjectClass = 'Pimcore\Model\DataObject\Objectbrick\Data\\' . ucfirst($class);
 
                     $brickFieldObject = new $brickFieldObjectClass($context->getObject());
 
@@ -90,7 +90,7 @@ class ObjectbrickSetter implements SetterInterface, GetterInterface
             $brickFieldObject = $brick->$brickClassGetter();
 
             if (!$brickFieldObject instanceof AbstractData) {
-                $brickFieldObjectClass = 'Pimcore\Model\DataObject\Objectbrick\Data\\' . $class;
+                $brickFieldObjectClass = 'Pimcore\Model\DataObject\Objectbrick\Data\\' . ucfirst($class);
 
                 $brickFieldObject = new $brickFieldObjectClass($context->getObject());
 
